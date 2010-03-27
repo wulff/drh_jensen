@@ -5,6 +5,6 @@ screenshot = images/screenshot.png
 core = 6.x
 base theme = ninesixty
 
-stylesheets[all][] = drh.css
+stylesheets[all][] = drh_jensen.css
 
 plugins[panels][layouts] = plugins/layouts
