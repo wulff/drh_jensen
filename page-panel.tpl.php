@@ -39,32 +39,19 @@
 
   <hr />
 
-  <div id="page" class="container-16 clear-block">
-    <div id="main" class="column <?php print ns('grid-16', $left, 4, $right, 4) . ' ' . ns('push-4', !$left, 4); ?>">
+  <div id="tools" class="container-16 clear-block">
+    <div class="grid-16">
       <?php if ($tabs): ?>
         <div class="tabs"><?php print $tabs; ?></div>
       <?php endif; ?>
       <?php print $messages; ?>
       <?php print $help; ?>
-
-      <div id="main-content" class="region clear-block">
-        <?php print $content; ?>
-      </div>
-
       <?php print $feed_icons; ?>
     </div>
+  </div>
 
-  <?php if ($left): ?>
-    <div id="sidebar-left" class="column sidebar region grid-4 <?php print ns('pull-12', $right, 4); ?>">
-      <?php print $left; ?>
-    </div>
-  <?php endif; ?>
-
-  <?php if ($right): ?>
-    <div id="sidebar-right" class="column sidebar region grid-4">
-      <?php print $right; ?>
-    </div>
-  <?php endif; ?>
+  <div id="content" class="container-16 clear-block">
+    <?php print $content; ?>
   </div>
 
   <div id="footer">

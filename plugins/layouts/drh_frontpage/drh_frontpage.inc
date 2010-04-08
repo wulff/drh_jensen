@@ -5,13 +5,14 @@
  * Implementation of hook_panels_layouts().
  */
 function drh_jensen_drh_frontpage_panels_layouts() {
-  $items['drh_page'] = array(
+  $items['drh_frontpage'] = array(
     'title' => t('DRH: Frontpage'),
     'icon' => 'drh_frontpage.png',
     'theme' => 'drh_frontpage',
     'css' => 'drh_frontpage.css',
     'panels' => array(
-      'top_left' => t('Top left'),
+      'top_left_1' => t('Top left 1'),
+      'top_left_2' => t('Top left 2'),
       'top_right' => t('Top right'),
       'teaser_1' => t('Teaser 1'),
       'teaser_2' => t('Teaser 2'),
