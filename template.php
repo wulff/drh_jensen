@@ -32,6 +32,16 @@ function drh_jensen_preprocess_drh_page(&$vars) {
   }
 }
 
+/**
+ * Set a varaible if we're on a panels admin page. This gives us a chance to
+ * make the admin interface a little nicer to look at.
+ */
+function drh_jensen_preprocess_drh_frontpage(&$vars) {
+  if ('admin' == arg(0) && 'pages' == arg(2)) {
+    $vars['panel_admin'] = TRUE;
+  }
+}
+
 /* --- CORE OVERRIDES ------------------------------------------------------- */
 
 function drh_jensen_fieldset($element) {

@@ -4,6 +4,11 @@
 
 /* @group Basic elements */
 
+body {
+  font-family: "Lucida Grande", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 80%;
+}
+
 a {
   color: #666;
   text-decoration: none;
@@ -16,6 +21,10 @@ hr {
   height: 1px;
   margin-top: 15px;
   margin-bottom: 21px;
+}
+hr.panel-separator {
+  margin-top: 7px;
+  margin-bottom: 19px;
 }
 tbody {
   border-top: none;
@@ -30,6 +39,35 @@ tr.even td {
 }
 tr.region {
   border-bottom: 1px solid #ccc;  
+}
+
+/* @end */
+
+/* @group Navigation */
+
+#navigation {
+  background-color: #333;
+  text-align: right;
+}
+#navigation ul {
+  padding: 1px 0 2px 0;
+}
+#navigation li {
+  padding: 0;
+}
+#navigation li a {
+  padding:  0 .5em 0 .5em;
+  color: #eee;
+}
+#navigation li a:hover {
+  color: #fff;
+}
+#navigation li.last a {
+  padding:  0 0 0 .5em;
+}
+#navigation li.active-trail a {
+  font-weight: bold;
+  color: #fff;
 }
 
 /* @end */
@@ -69,6 +107,36 @@ tr.region {
   color: #ccc;
 }
 
+/* teaser nodes */
+.front .teasers {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+.front .teaser {
+  position: relative;
+  height: 265px;
+}
+.front .teaser div.field-field-image-front-off {
+  position: absolute;
+  top: 2.75em;
+  left: 0;
+  z-index: -1;
+}
+.front .teaser div.field-field-image-front-on {
+  position: absolute;
+  top: 2.75em;
+  left: 0;
+}
+
+/* images at the bottom of the page */
+.front .view-images .views-row {
+  float: left;
+  margin-left: 2px;
+}
+.front .view-images .views-row-first {
+  margin-left: 0;
+}
+
 /* @end */
 
 /* @group Tabs */
@@ -94,6 +162,21 @@ ul.primary li a:hover {
 ul.primary li.active a {
   border: 1px solid #090;
   color: #090;
+}
+
+/* @end */
+
+/* @group Node */
+
+.page-node .view-images .views-row {
+  float: left;
+  margin-left: 2px;
+}
+.page-node .view-images .views-row-first {
+  margin-left: 0;
+}
+.page-node .view-images .views-row {
+  height: 65px;
 }
 
 /* @end */
@@ -264,6 +347,9 @@ html.js .node-form .path-redirect .description {
 .form-region-main .resizable-textarea {
   width: 458px;
 }
+.form-region-main .group-images .form-autocomplete {
+  width: 353px;
+}
 #edit-title {
   width: 454px;
 }
@@ -281,14 +367,22 @@ html.js .node-form .path-redirect .description {
   width: 220px;
 }
 
+#edit-field-course-ref-nid-nid-wrapper,
+#edit-field-image-0-wrapper,
 #edit-field-map-0-value-wrapper {
   margin-left: 15px;
 }
+#edit-field-course-ref-nid-nid-wrapper label,
+#edit-field-image-0-wrapper label,
 #edit-field-map-0-value-wrapper label {
   display: none;
 }
 #edit-field-map-0-value {
   width: 439px;
+}
+
+.pop-tags {
+  margin-bottom: 7px;
 }
 
 /**
