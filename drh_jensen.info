@@ -12,5 +12,3 @@ stylesheets[all][] = drh_jensen.css
 ; get rid of a couple of stylesheets from the base theme
 stylesheets[all][] = reset.css
 stylesheets[all][] = text.css
-
-plugins[panels][layouts] = plugins/layouts
