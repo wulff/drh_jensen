@@ -16,8 +16,8 @@ a {
 hr {
   width: 940px;
   border: 0;  
-  color: #eee;
-  background-color: #eee;
+  color: #ddd;
+  background-color: #ddd;
   height: 1px;
   margin-top: 15px;
   margin-bottom: 21px;
@@ -259,7 +259,7 @@ html.js .node-form fieldset.collapsed legend span {
   left: 0px;
 }
 html.js .node-form fieldset.collapsed {
-  height: 18px;
+  height: 21px;
 }
 
 /* remove default arrows from legend and add them to the span instead */
