@@ -13,19 +13,34 @@ a {
   color: #666;
   text-decoration: none;
 }
+a.active {
+  font-weight: bold;
+}
+.pane-node-body a {
+  color: #009;
+}
+.pane-node-body a:hover {
+  border-bottom: 1px solid #009;
+}
+
+h2.pane-title {
+  font-size:1.2em;line-height:1.25;margin-bottom:1.25em;
+}
+
 hr {
   width: 940px;
   border: 0;  
   color: #ddd;
   background-color: #ddd;
   height: 1px;
-  margin-top: 15px;
-  margin-bottom: 21px;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 hr.panel-separator {
   margin-top: 7px;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
+
 tbody {
   border-top: none;
 }
@@ -45,12 +60,12 @@ tr.region {
 
 /* @group Navigation */
 
-#navigation {
+#navigation .container-16 ul {
   background-color: #333;
   text-align: right;
 }
 #navigation ul {
-  padding: 1px 0 2px 0;
+  padding: 3px 9px 3px 0;
 }
 #navigation li {
   padding: 0;
@@ -75,7 +90,7 @@ tr.region {
 /* @group Header */
 
 #header {
-  margin-top: 17px;
+  margin-top: 16px;
 }
 #site-name, #page-title {
   display: inline;
@@ -109,8 +124,7 @@ tr.region {
 
 /* teaser nodes */
 .front .teasers {
-  margin-top: 1em;
-  margin-bottom: 3em;
+  margin-top: 20px;
 }
 .front .teaser {
   position: relative;
@@ -118,14 +132,29 @@ tr.region {
 }
 .front .teaser div.field-field-image-front-off {
   position: absolute;
-  top: 2.75em;
+  top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -9;
 }
 .front .teaser div.field-field-image-front-on {
   position: absolute;
-  top: 2.75em;
+  top: 0;
   left: 0;
+  z-index: -2;
+}
+.front .teaser h2 {
+  z-index: -1;
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-top: 10px;
+  margin-bottom: 1.25em;
+  text-align: center;
+}
+.front .teaser p {
+  position: absolute;
+  top: 3.5em;
+  left: 20px;
+  z-index: -3;
 }
 
 /* images at the bottom of the page */
@@ -176,7 +205,7 @@ ul.primary li.active a {
   margin-left: 0;
 }
 .page-node .view-images .views-row {
-  height: 65px;
+  height: 86px;
 }
 
 /* @end */
@@ -476,3 +505,67 @@ html.js fieldset.collapsible legend a span {
 #page-manager-edit .page-manager-edit-operations ul {
   margin-right: 0px;
 }
+
+/* @group Markdown filter tips */
+
+#admin-menu {
+  background: #090;
+}
+#admin-menu li a {
+  border-left: none;
+  border-right: 1px solid #070;
+}
+#admin-menu li.admin-menu-action a {
+  border-left: 1px solid #070;
+  border-right: none;
+}
+#admin-menu li.expandable.admin-menu-icon a {
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+/* @end */
+
+
+ul.menu {
+  padding-left: 0;
+  padding-bottom: .25em;
+  margin-right: 0;
+  background-color: #f0f0f0;
+  border: none;
+}
+ul.menu li {
+  margin-left: .5em;
+  list-style: none;
+}
+
+/* front page */
+
+#welcome p {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+.front .view-footer p {
+  text-align: right;
+}
+
+.front .images {
+  margin-top: 20px;
+}
+
+
+
+.grid-4 .views-field-field-image-fid {
+  float: left;
+  margin-right: 10px;
+}
+
+/*
+h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
+h2 {font-size:2em;margin-bottom:0.75em;}
+h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
+h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
+h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h6 {font-size:1em;font-weight:bold;}
+*/

@@ -16,13 +16,6 @@ function drh_jensen_preprocess_page(&$vars) {
 }
 
 /**
- *
- */
-function drh_jensen_preprocess_node(&$vars) {
-//  dpm($vars);
-}
-
-/**
  * Set a varaible if we're on a panels admin page. This gives us a chance to
  * make the admin interface a little nicer to look at.
  */
@@ -86,6 +79,22 @@ function drh_jensen_date_combo($element) {
 }
 
 /**
+ * Theme formatter medium.
+ */
+function drh_jensen_embed_gmap_formatter_medium($element) {
+  $element['#item'] = embed_gmap_process_value($element['#item']);
+
+  if (empty($element['#item']['value'])) {
+    return '';
+  }
+
+  $width = 425;
+  $height = 240;
+
+  return '<iframe width="'. $width .'" height="'. $height .'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'. $element['#item']['value'] .'"></iframe><p class="embed-gmap-link"><a href="'. str_replace('&amp;output=embed', '', $element['#item']['value']) .'" target="_BLANK">'. t('Show large map') .'</a></p>';
+}
+
+/**
  * Theme formatter large.
  */
 function drh_jensen_embed_gmap_formatter_large($element) {
@@ -99,4 +108,11 @@ function drh_jensen_embed_gmap_formatter_large($element) {
   $height = 432;
 
   return '<iframe width="'. $width .'" height="'. $height .'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'. $element['#item']['value'] .'"></iframe><p class="embed-gmap-link"><a href="'. str_replace('&amp;output=embed', '', $element['#item']['value']) .'" target="_BLANK">'. t('Show large map') .'</a></p>';
+}
+
+/**
+ * Render an icon to display in the Administration Menu.
+ */
+function drh_jensen_admin_menu_icon() {
+  return t('Drupal');
 }

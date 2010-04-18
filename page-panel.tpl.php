@@ -8,7 +8,7 @@
   <?php print $scripts; ?>
 </head>
 
-<body class="<?php print $body_classes; ?>"> <!-- show-grid -->
+<body class="<?php print $body_classes; ?>">
   <div id="navigation">
     <div class="container-16 clear-block">
       <div id="primary_navigation" class="grid-16">
