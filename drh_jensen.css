@@ -432,7 +432,7 @@ html.js .node-form .path-redirect .description {
  * hide filter tips
  */
 .node-form .teaser-checkbox,
-.node-form ul,
+.node-form ul.tips,
 .node-form p {
   display: none;
 }
@@ -624,12 +624,76 @@ ul.menu li {
   padding-top: 1px;
 }
 
-/*
-h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
-h2 {font-size:2em;margin-bottom:0.75em;}
-h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
-h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
-h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
-h6 {font-size:1em;font-weight:bold;}
-*/
+/* calendar */
 
+.calendar-calendar ul.links li.first {
+  padding-left: 0px;
+}
+.calendar-calendar ul.links {
+  display: none;
+}
+
+.calendar-calendar div.date-nav {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+.calendar-calendar div.date-nav a,
+.calendar-calendar div.date-nav h3 {
+  color: #fff;
+}
+
+.calendar-calendar .month-view table {
+  width: auto;
+}
+.calendar-calendar th.days {
+  border: none;
+  background-color: #333;
+  color: #eee;
+}
+.calendar-calendar td {
+  width: 130px;
+  min-width: 130px;
+  padding-top: 5px;
+  padding-right: 5px;
+  border: none;
+}
+.calendar-calendar td.sun {
+  padding-right: 0;
+}
+.calendar-calendar td.empty {
+  background: none;
+}
+.calendar-calendar div.inner {
+  background-color: #eee;
+  min-height: 75px;
+}
+.calendar-calendar td.empty div.inner {
+  background-color: #fff;
+}
+.calendar-calendar tr td.today {
+  background: none;
+}
+.calendar-calendar tr td.today div.inner {
+  background: #ccc;
+}
+
+.calendar-calendar td .inner div.day a {
+  color: #333;
+}
+.calendar-calendar td .inner div,
+.calendar-calendar td .inner div a {
+  background: none;
+}
+.calendar-calendar td div.day {
+  border: none;
+}
+
+.calendar-calendar td .inner div.calendar div,
+.calendar-calendar td .inner div.calendar div a {
+  background: none;
+}
+.calendar-calendar td .inner div.calendar div a {
+  font-weight: bold;
+  padding: 0;
+}
