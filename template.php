@@ -4,7 +4,20 @@
 /* --- PREPROCESSORS -------------------------------------------------------- */
 
 /**
- *
+ * Render an image link for use in event popups
+ */
+function drh_jensen_preprocess_node(&$vars) {
+  if (!empty($vars['field_image_ref'][0]['nid'])) {
+    $image = node_load($vars['field_image_ref'][0]['nid']);
+
+    if (!empty($image->field_image[0]['filepath'])) {
+      $vars['field_image_ref_rendered'] = theme('imagecache', 'calendar_popup', $image->field_image[0]['filepath'], $image->title, $image->title);
+    }
+  }
+}
+
+/**
+ * Switch out the page template if we're displaying a panel.
  */
 function drh_jensen_preprocess_page(&$vars) {
   if (panels_get_current_page_display()) {
@@ -115,4 +128,13 @@ function drh_jensen_embed_gmap_formatter_large($element) {
  */
 function drh_jensen_admin_menu_icon() {
   return t('Drupal');
+}
+
+/**
+ * Jcalendar popup view.
+ */
+function drh_jensen_jcalendar_view($node) {
+  $output = node_view($node, TRUE);
+  $output .= '<div id="nodelink">'. l(t('Read more', array(), $node->language), calendar_get_node_link($node)) .'</div>';
+  return $output;
 }

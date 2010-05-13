@@ -697,3 +697,66 @@ ul.menu li {
   font-weight: bold;
   padding: 0;
 }
+
+/* @group Calendar popups */
+
+div#calpopup {
+  border: 1px solid #000;
+  width: 265px;
+
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-box-shadow: 10px 10px 5px #666;
+  -webkit-box-shadow: 10px 10px 5px #888;
+}
+
+div#calpopup-body div.node {
+  margin: 10px 10px 0 10px;
+}
+div#calpopup-body div.node p {
+  margin-bottom: .75em;
+}
+div#calpopup-body div.node div.meta {
+  margin-bottom: .5em;
+  color: #999;
+}
+div#calpopup-body div.node h3 {
+  margin-bottom: .5em;
+}
+
+div#calpopup-body {
+  margin: 0;
+  max-height: 315px;
+}
+
+#popup-close {
+  padding: 3px;
+  background-color: #000;
+  line-height: 0.1;
+}
+
+div#nodelink {
+  margin: 0 10px 10px 10px;
+}
+
+/* @end */
+
+/* @group Messages */
+
+.messages {
+  margin-bottom: 18px;
+  padding: 10px;
+  color: #fff;
+}
+.status {
+  background-color: #090;
+}
+.error {
+  background-color: #900;
+}
+
+/* @end */
+
+.not-logged-in .form-required {
+  display: none;
+}
