@@ -7,6 +7,7 @@
 body {
   font-family: "Lucida Grande", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 80%;
+  background: #fff url(images/bg.png) repeat-y center;
 }
 
 a {
@@ -544,11 +545,12 @@ ul.menu {
   padding-left: 0;
   padding-bottom: .25em;
   margin-right: 0;
-  background-color: #f0f0f0;
+  background-color: #fff;
   border: none;
+  border-top: solid 1px #ddd;
 }
 ul.menu li {
-  margin-left: .5em;
+  margin-left: 0;
   list-style: none;
 }
 
@@ -558,6 +560,7 @@ ul.menu li {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1em;
+  color: #666;
 }
 .front .view-footer p {
   text-align: right;
